@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Blog preview card</title>
+  <style>
+    :root{
+      --card-width: max(20vw, 40vh);
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @font-face {
+      font-family: Figtree;
+      src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+    }
+    body{
+      font-family: 'Figtree', sans-serif;
+      font-size: 16px;
+      color: hsl(0, 0%, 7%);
+    }
+    .yellow-bg {
+      background-color: hsl(47, 88%, 63%);
+      height: 100vh;
+      width: 100vw;
+      margin: auto;
+      display: grid;
+    }
+    #card {
+      background-color: hsl(0, 0%, 100%);
+      /* height: 60%; */
+      width: var(--card-width);
+      margin: auto;
+      border: 1px hsl(0, 0%, 7%) solid;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 5px 5px 0px hsl(0, 0%, 7%);
+      padding: 1em;
+    }
+    #card-img {
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    #card-content {
+      width: 100%;
+      margin-inline: auto;  
+    }
+    .tag {
+      background-color: hsl(47, 88%, 63%);
+      width: fit-content;
+      border-radius: 5px;
+      padding: 0.5ch 1ch;
+      margin-bottom: 0.5em;
+      font-weight: 800;
+      font-size: 0.8em;
+    }
+    .date {
+      font-size: 0.7em;
+      margin-bottom: 0.5em;
+      font-weight: 600;
+    }
+    .title {
+      font-size: 1em;
+      font-weight: 800;
+      margin-bottom: 0.5em;
+    }
+    .title a {
+      text-decoration: inherit;
+      color: inherit;
+    }
+    .title a:hover {
+      color:hsl(47, 88%, 63%);
+    }
+    .text {
+      font-size: 0.7em;
+      color: hsl(0, 0%, 50%);
+      line-height: 1.5em;
+    }
+    .author {
+      display: flex;
+      margin-top: 1em;
+    }
+    .author img {
+      height: 2em;
+      margin-right: 0.7em;
+    }
+    .name {
+      font-size: 0.6em;
+      font-weight: 800;
+      align-self: center;
+    }
+
+    
+
+  </style>
+</head>
+<body >
+
+  <div class="yellow-bg">
+    <div id="card">
+      <img src="./assets/images/illustration-article.svg" alt="Drawers" id="card-img">
+      <div id="card-content">
+        <div class="tag">Learning</div>
+        <div class="date">Published 21 Dec 2023</div>
+        <div class="title"><a href="#">HTML & CSS foundations</a></div>
+        <div class="text"><span>These languages are the backbone of every website, defining structure, content and presentation.</span></div>
+        <div class="author">
+          <img src="./assets/images/image-avatar.webp" alt="Michelle Appleton">
+          <div class="name">Greg Hooper</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
