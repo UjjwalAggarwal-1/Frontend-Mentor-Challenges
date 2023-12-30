@@ -62,6 +62,14 @@ Users should be able to:
 
 * for the html, i only used divs. not sure if <p> or <span> or some other alternative would have reduced my code (by not requiring certain css)?
 
+* landmarks in html
+
+    - used main here
+
+    ```html
+    <main class="yellow-bg">
+    ```
+
 ### Continued development
 
 * there is huge doubt in my mind with the width and height?
