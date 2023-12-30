@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+
+    <div class="card">
+      <div class="signup">
+
+        <div class="title">Stay updated!</div>
+        <div class="info">Join 60,000+ product manageres receiving my updates!!</div>
+        <ul>
+          <li> Product discovery and building what matters</li>
+          <li> Measuring to ensure updates are a success</li>
+          <li> And much more baby!!!!</li>
+        </ul>
+        <div class="email-label">
+          <label class="email" for="email">Email address</label>
+          <div class="error" hidden>Valid email required</div>
+        </div>
+        <input id="email" type="text" placeholder="email@company.com">
+        <input id="submit-email" type="button" value="Subscribe to monthly newsletter">
+
+      </div>
+      <img class="image" src="assets/images/illustration-sign-up-desktop.svg" alt="oops!">
+    </div>
+
+  </main>
+
+  <script>
+    if (window.innerWidth<768){
+      document.getElementsByClassName('image')[0].setAttribute('src', 'assets/images/illustration-sign-up-mobile.svg');
+    }
+    document.getElementById("submit-email").addEventListener('click',()=>{
+      email= document.getElementById('email').value;
+      if (!(String(email).toLowerCase().match(/^\S+@\S+\.\S+$/))){
+        document.getElementsByClassName('error')[0].removeAttribute('hidden');
+        document.getElementById('email').setAttribute('style','color:var(--tomato);background-color:var(--tomato-faded);border-color:var(--tomato)')
+      }else{
+        document.getElementsByTagName('main')[0].innerHTML = `
+        <div class="card card-2">
+          <div class="success">
+            <img src="assets/images/icon-success.svg">
+            <div class="title">Thanks for subscribing!</div>
+            <div class="info">A confirmation email has been sent to <b> ${email}</b>. Please open it and click the button inside to confirm your subscription!!</div>
+            <input id="submit-email" type="button" value="Dismiss message">
+
+          </div>
+        </div>
+        `
+      }
+    })
+
+    document.getElementById('email').addEventListener('click',()=>{
+      document.getElementById('email').removeAttribute('style');
+      document.getElementsByClassName('error')[0].setAttribute('hidden','');
+    })
+
+  </script>
+</body>
+</html>
