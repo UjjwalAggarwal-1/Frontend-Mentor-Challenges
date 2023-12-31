@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <a href="blog-preview-card-main/">blog-preview-card</a>
-    
+    <main>
+        <div class="gallery">
+
+        </div>
+    </main>
+
+    <script>
+
+        let a = [
+            "blog-preview-card-main/", 
+            "newsletter-sign-up-with-success-message-main/",
+        ]
+        for (s of a) {
+            document.getElementsByClassName('gallery')[0].innerHTML += `
+<div class="card"><a href="${s}" target="_blank"><div>${s.replaceAll('-',' ').replace('/','')}</div><img src="${s}design/desktop-design.jpg" alt="OOPS!"></a></div>`
+        };
+
+    </script>
 </body>
+
 </html>
