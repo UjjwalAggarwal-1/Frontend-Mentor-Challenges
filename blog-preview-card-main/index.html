@@ -21,21 +21,23 @@
     }
     body{
       font-family: 'Figtree', sans-serif;
-      font-size: 16px;
+      font-size: 1rem;
       color: hsl(0, 0%, 7%);
+      background-color: hsl(47, 88%, 63%);
+      min-height: 100vh;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
     }
     .yellow-bg {
-      background-color: hsl(47, 88%, 63%);
-      height: 100vh;
-      width: 100vw;
-      margin: auto;
-      display: grid;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap:2rem;
     }
-    #card {
+    .card {
       background-color: hsl(0, 0%, 100%);
       /* height: 60%; */
       width: var(--card-width);
-      margin: auto;
       border: 1px hsl(0, 0%, 7%) solid;
       border-radius: 10px;
       display: flex;
@@ -43,11 +45,11 @@
       box-shadow: 5px 5px 0px hsl(0, 0%, 7%);
       padding: 1em;
     }
-    #card-img {
+    .card-img {
       border-radius: 10px;
       margin-bottom: 1em;
     }
-    #card-content {
+    .card-content {
       width: 100%;
       margin-inline: auto;  
     }
@@ -58,15 +60,15 @@
       padding: 0.5ch 1ch;
       margin-bottom: 0.5em;
       font-weight: 800;
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
     .date {
-      font-size: 0.7em;
+      font-size: 0.7rem;
       margin-bottom: 0.5em;
       font-weight: 600;
     }
     .title {
-      font-size: 1em;
+      font-size: 1rem;
       font-weight: 800;
       margin-bottom: 0.5em;
     }
@@ -74,11 +76,11 @@
       text-decoration: inherit;
       color: inherit;
     }
-    .title a:hover {
+    .title a:hover, .title a:focus{
       color:hsl(47, 88%, 63%);
     }
     .text {
-      font-size: 0.7em;
+      font-size: 0.7rem;
       color: hsl(0, 0%, 50%);
       line-height: 1.5em;
     }
@@ -91,7 +93,7 @@
       margin-right: 0.7em;
     }
     .name {
-      font-size: 0.6em;
+      font-size: 0.6rem;
       font-weight: 800;
       align-self: center;
     }
@@ -103,19 +105,34 @@
 <body >
 
   <main class="yellow-bg">
-    <div id="card">
-      <img src="./assets/images/illustration-article.svg" alt="Drawers" id="card-img">
-      <div id="card-content">
+    <div class="card">
+      <img src="./assets/images/illustration-article.svg" alt="Drawers" class="card-img">
+      <div class="card-content">
         <div class="tag">Learning</div>
-        <div class="date">Published 21 Dec 2023</div>
-        <div class="title"><a href="https://www.linkedin.com/posts/ujjwalaggarwal-alwayslearning_these-font-stacks-will-improve-your-site-activity-7146483821910065152-q4C-/" target="_blank">HTML & CSS foundations</a></div>
-        <div class="text">These languages are the backbone of every website, defining structure, content and presentation.</div>
+        <div class="date">Published 19 Nov 2023</div>
+        <div class="title"><a href="https://www.linkedin.com/posts/ujjwalaggarwal-alwayslearning_these-font-stacks-will-improve-your-site-activity-7146483821910065152-q4C-/">Fonts that improve site performance</a></div>
+        <div class="text">Different fonts can improve the performance due to different loading speeds.</div>
         <div class="author">
           <img src="./assets/images/image-avatar.webp" alt="Michelle Appleton">
-          <div class="name">Greg Hooper</div>
+          <div class="name">Ujjwal Aggarwal</div>
         </div>
       </div>
     </div>
+
+    <div class="card">
+      <img src="./assets/images/illustration-article.svg" alt="Drawers" class="card-img">
+      <div class="card-content">
+        <div class="tag">Learning</div>
+        <div class="date">Published 21 Dec 2023</div>
+        <div class="title"><a href="https://www.linkedin.com/posts/ujjwalaggarwal-alwayslearning_css-activity-7146033882964930561-9vNw/">Adding a custom Cursor with CSS</a></div>
+        <div class="text"> A custom cursor can added to give a unique look to your website, using CSS. These languages are the backbone of every website, defining structure, content and presentation.</div>
+        <div class="author">
+          <img src="./assets/images/image-avatar.webp" alt="Michelle Appleton">
+          <div class="name">Ujjwal Aggarwal</div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
 </body>
