@@ -52,18 +52,23 @@
             <img src="assets/images/icon-success.svg">
             <div class="title">Thanks for subscribing!</div>
             <div class="info">A confirmation email has been sent to <b> ${email}</b>. Please open it and click the button inside to confirm your subscription!!</div>
-            <input id="submit-email" type="button" value="Dismiss message">
-
+            <input id="submit-email" onclick="popWindow()" type="button" value="Dismiss message">
           </div>
         </div>
         `
       }
-    })
+    });
 
     document.getElementById('email').addEventListener('click',()=>{
       document.getElementById('email').removeAttribute('style');
       document.getElementsByClassName('error')[0].setAttribute('hidden','');
-    })
+    });
+
+    function popWindow (){
+      if (confirm("Close tab?")) {
+        close();
+      }
+    }
 
   </script>
 </body>
