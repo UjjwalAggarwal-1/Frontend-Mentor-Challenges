@@ -20,10 +20,11 @@
         let a = [
             "blog-preview-card-main/", 
             "newsletter-sign-up-with-success-message-main/",
+            "neumorphic-buttons/",
         ]
         for (s of a) {
             document.getElementsByClassName('gallery')[0].innerHTML += `
-<div class="card"><a href="${s}" target="_blank"><div>${s.replaceAll('-',' ').replace('/','')}</div><img src="${s}design/desktop-design.jpg" alt="OOPS!"></a></div>`
+<div class="card"><a href="${s}" target="_blank"><div>${s.replaceAll('-',' ').replace('/','').toUpperCase()}</div><img src="${s}design/desktop-design.jpg" alt="OOPS!"></a></div>`
         };
 
     </script>

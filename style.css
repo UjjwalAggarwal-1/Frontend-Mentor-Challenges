@@ -64,3 +64,11 @@ img {
   scale: 0.9;
 }
 
+.card > a > div{
+  text-shadow: 0.5px 0px black, -0.5px 0px black,
+  0px 0.5px black, 0px -0.5px black,
+  0.5px 0.5px black, -0.5px -0.5px black,
+  0.5px -0.5px black, -0.5px 0.5px black,
+  -1.5px 1.5px black;
+  letter-spacing: 0.05rem;
+}
