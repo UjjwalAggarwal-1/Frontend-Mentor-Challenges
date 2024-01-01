@@ -1,10 +1,10 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
+body {
   background-color: #010811;
   background-image: url("backdrop.jpg");
   background-repeat: no-repeat;
@@ -13,14 +13,14 @@ body{
 }
 
 div:not(.gallery, .card) {
-  top: 1ch; 
-  left:2ch;
+  top: 1ch;
+  left: 2ch;
   color: white;
   z-index: 2;
   position: absolute;
   font-family: system-ui;
   font-weight: 800;
-  display:none;
+  display: none;
 }
 
 .gallery {
@@ -33,11 +33,11 @@ div:not(.gallery, .card) {
   gap: 0.5vw;
 }
 
-.card{
+.card {
   position: relative;
   width: 19.5vw;
   aspect-ratio: 1/1;
-  transition: all 0.5s ease;
+  transition: transform 0.1s linear, scale 0.5s ease;
 }
 
 a {
@@ -52,23 +52,41 @@ img {
   object-fit: cover;
 }
 
-.card:hover{
-    scale:1.1;
-  }
-  
-.card:hover div{
-  display:block;
+.card > a > div {
+  text-shadow: 0.5px 0px black, -0.5px 0px black, 0px 0.5px black,
+    0px -0.5px black, 0.5px 0.5px black, -0.5px -0.5px black, 0.5px -0.5px black,
+    -0.5px 0.5px black, -1.5px 1.5px black;
+  letter-spacing: 0.05rem;
+}
+
+.card:hover {
+  scale: 1.1;
+}
+
+.card:hover > a > div {
+  display: block;
 }
 
 .gallery:has(:hover) .card:not(:hover) {
   scale: 0.9;
 }
 
-.card > a > div{
-  text-shadow: 0.5px 0px black, -0.5px 0px black,
-  0px 0.5px black, 0px -0.5px black,
-  0.5px 0.5px black, -0.5px -0.5px black,
-  0.5px -0.5px black, -0.5px 0.5px black,
-  -1.5px 1.5px black;
-  letter-spacing: 0.05rem;
+@media screen and (max-width: 1200px) {
+  .gallery {
+    width: 99vw;
+    justify-content: center;
+  }
+  .card {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    gap: 5em;
+  }
+
+  .card {
+    width: 60vw;
+  }
 }
