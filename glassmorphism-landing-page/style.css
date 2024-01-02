@@ -19,7 +19,7 @@ body {
 .card {
   height: 80%;
   width: 80%;
-  border: 5px rgba(255, 255, 255, 0.573) solid;
+  /* border: 5px rgba(255, 255, 255, 0.573) solid; */
   border-radius: 2rem;
 
   position: relative;
@@ -30,7 +30,8 @@ body {
   /* padding-top: 2rem; */
   padding-bottom: 2rem;
 
-  box-shadow: -15px 15px 45px -30px black;
+  box-shadow: -15px 15px 45px -30px black,
+    inset -1px -1px 10px 10px rgba(255,255,255,1);
   font-family: system-ui, sans-serif;
 }
 
@@ -40,7 +41,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  filter: contrast(85%) blur(3px) brightness(110%);
+  filter: contrast(70%) blur(4px) brightness(120%);
   border-radius: 2rem;
   position: absolute;
   top: 0;
