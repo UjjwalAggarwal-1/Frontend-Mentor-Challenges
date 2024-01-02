@@ -41,7 +41,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  filter: contrast(70%) blur(4px) brightness(120%);
+  filter: contrast(80%) blur(4px) brightness(120%);
   border-radius: 2rem;
   position: absolute;
   top: 0;
