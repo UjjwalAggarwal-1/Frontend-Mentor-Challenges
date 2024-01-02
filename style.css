@@ -6,7 +6,7 @@
 
 body {
   background-color: #010811;
-  background-image: url("backdrop.jpg");
+  background-image: url("./images/backdrop.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

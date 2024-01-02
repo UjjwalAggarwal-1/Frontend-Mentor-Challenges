@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("./../images/test5.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  perspective: 1000px;
+}
+
+.card {
+  height: 80%;
+  width: 80%;
+  border: 5px rgba(255, 255, 255, 0.573) solid;
+  border-radius: 2rem;
+
+  position: relative;
+
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* padding-top: 2rem; */
+  padding-bottom: 2rem;
+
+  box-shadow: -15px 15px 45px -30px black;
+  font-family: system-ui, sans-serif;
+}
+
+.card > .to-blur {
+  background: url("./../images/test5.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  filter: contrast(85%) blur(3px) brightness(110%);
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card > .navbar {
+  color: tomato;
+  z-index: 2;
+  position: relative;
+  /* padding-bottom: 0.5em; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  margin-left: 2vw;
+}
+
+.navbar:before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  height: 1px;
+  width: 60%;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  z-index: 2;
+}
+
+.nav-links > a {
+  text-decoration: none;
+  margin: 0 0.5vw;
+  font-weight: bold;
+  color: white;
+}
+.nav-links > a:hover {
+  color: tomato;
+}
+.nav-links {
+  margin-right: 5vw;
+}
+
+.card > .subpanel {
+  display: flex;
+}
+
+.card > .subpanel > img:first-of-type {
+  width: 40%;
+  object-fit: contain;
+  z-index: 2;
+  margin-right: 2vw;
+}
+
+.card > .subpanel > .content {
+  font-size: clamp(0.8rem, 0.5vw + 1rem, 1.5rem);
+  line-height: 2.5rem;
+  margin-inline: 2rem;
+  margin-top: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: rgb(255, 255, 255);
+
+  z-index: 2;
+}
